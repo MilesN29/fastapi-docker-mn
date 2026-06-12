@@ -1,8 +1,14 @@
 import uvicorn
 from fastapi import FastAPI
+import os
+import sys
 
 app = FastAPI(title="Simple API", version="1.0.0")
 
+# Add this poorly formatted function at the end of the file
+def poorly_formatted_function(x,y,z):
+    result=x+y+z
+    return result
 
 @app.get("/")
 def read_root():
